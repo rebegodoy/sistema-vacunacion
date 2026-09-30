@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Sistema de Vacunación</title>
+  <link rel="stylesheet" href="../css/base.css">
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <h1>💉 Vacunación USF</h1>
+      <nav>
+        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="pacientes.html">Pacientes</a>
+        <a href="registro.html">Registrar dosis</a>
+        <a href="importar.html">Importar Excel</a>
+      </nav>
+    </aside>
+
+    <!-- CONTENIDO -->
+    <main class="main">
+
+      <div class="topbar">
+        <h2>Alertas de vacunación</h2>
+        <span class="user-badge">Enfermera: María López</span>
+      </div>
+
+      <!-- CARDS RESUMEN -->
+      <div class="cards">
+        <div class="card">
+          <div class="label">Pacientes totales</div>
+          <div class="value">248</div>
+        </div>
+        <div class="card warning">
+          <div class="label">Próximas (3-5 días)</div>
+          <div class="value">12</div>
+        </div>
+        <div class="card danger">
+          <div class="label">Vencidas</div>
+          <div class="value">4</div>
+        </div>
+        <div class="card success">
+          <div class="label">Al día</div>
+          <div class="value">232</div>
+        </div>
+      </div>
+
+      <!-- ALERTA PRINCIPAL -->
+      <div class="alert alert-warning">
+        ⚠️ Hay <strong>12 pacientes</strong> que necesitan su vacuna en los próximos 5 días.
+      </div>
+
+      <!-- TABLA DE PRÓXIMAS VACUNAS -->
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Paciente</th>
+              <th>CI / Tutor</th>
+              <th>Vacuna</th>
+              <th>Dosis</th>
+              <th>Fecha próxima</th>
+              <th>Días</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Juan Pérez</td>
+              <td>7654321</td>
+              <td>Pentavalente</td>
+              <td>2da</td>
+              <td>29/09/26</td>
+              <td>5</td>
+              <td><span class="badge badge-warning">Próxima</span></td>
+            </tr>
+            <tr>
+              <td>Ana Gómez</td>
+              <td>1112223</td>
+              <td>BCG</td>
+              <td>única</td>
+              <td>01/10/26</td>
+              <td>7</td>
+              <td><span class="badge badge-info">Programada</span></td>
+            </tr>
+            <tr>
+              <td>Luis Rojas</td>
+              <td>9998887</td>
+              <td>Influenza</td>
+              <td>anual</td>
+              <td>25/09/26</td>
+              <td>-2</td>
+              <td><span class="badge badge-danger">Vencida</span></td>
+            </tr>
+            <tr>
+              <td>María Benítez</td>
+              <td>5554443</td>
+              <td>Triple viral</td>
+              <td>1ra</td>
+              <td>30/09/26</td>
+              <td>6</td>
+              <td><span class="badge badge-warning">Próxima</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </main>
+  </div>
+
+</body>
+</html>
